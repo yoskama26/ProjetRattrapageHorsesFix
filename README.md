@@ -1,24 +1,9 @@
 # README
+Pour lancer le serveur : rails s 
+Possibilité de créer un nouveau "Horse" avec un : name, race, color et stable
+De base, il n'y a pas d'écurie (stable) créée et il faut avoir une étable pour pouvoir créer son cheval
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+/stables
+ On peut créer une écurie
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ Une fois l'écurie créée, on peut y ajouter un cheval qui aura cette écurie assignée, puis si on veut, on peut l'edit ou le supprimmer
