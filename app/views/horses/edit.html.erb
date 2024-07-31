@@ -1,0 +1,6 @@
+<!-- app/views/horses/edit.html.erb -->
+<%= turbo_frame_tag "horses" do %>
+  <h1>Edit Horse</h1>
+  <%= render 'form', horse: @horse %>
+  <%= link_to 'Back', horses_path, style: 'background-color: purple; color: white; padding: 5px 10px; border-radius: 3px; text-decoration: none;' %>
+<% end %>

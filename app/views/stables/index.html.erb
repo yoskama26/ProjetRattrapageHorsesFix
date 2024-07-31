@@ -1,0 +1,29 @@
+<h1>Stables</h1>
+<%= link_to 'Add New Stable +', new_stable_path , style: 'background-color: black; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Number of Horses</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @stables.each do |stable| %>
+      <tr id="<%= dom_id(stable) %>">
+        <td><%= stable.name %></td>
+        <td>
+          <%= stable.address.line1 %>, <%= stable.address.city %>, <%= stable.address.country %>
+        </td>
+        <td><%= stable.horses.size %></td>
+        <td>
+          <%= link_to 'Show', stable_path(stable), style: 'background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+          <%= link_to 'Edit', edit_stable_path(stable), style: 'background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+          <%= link_to 'Delete', stable_path(stable), method: :delete, data: { turbo_confirm: 'Are you sure?', turbo_method: :delete }, style: 'background-color: red; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+  
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

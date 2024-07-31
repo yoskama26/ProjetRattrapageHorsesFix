@@ -1,0 +1,24 @@
+<h1 class="stable-name"><%= @stable.name %></h1>
+
+<div class="stable-details">
+  <p><strong>Address:</strong></p>
+  <ul class="address-list">
+    <li><strong>Line 1:</strong> <%= @stable.address.line1 %></li>
+    <li><strong>Zipcode:</strong> <%= @stable.address.zipcode %></li>
+    <li><strong>City:</strong> <%= @stable.address.city %></li>
+    <li><strong>Country:</strong> <%= @stable.address.country %></li>
+  </ul>
+
+  <p><strong>Number of Horses:</strong> <%= @stable.horses.size %></p>
+</div>
+
+<h2 class="horses-title">Horses in this Stable</h2>
+<ul class="horses-list">
+  <% @stable.horses.each do |horse| %>
+    <li><strong><%= horse.name %></strong> - <%= horse.color %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_stable_path(@stable) , style: 'background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>|
+<%= link_to 'Back', stables_path, style: 'background-color: purple; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+<%= link_to 'Delete', stable_path(@stable), method: :delete, data: { confirm: 'Are you sure?' } , style: 'background-color: red; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>

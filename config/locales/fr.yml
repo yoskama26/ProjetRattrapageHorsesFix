@@ -1,0 +1,4 @@
+fr:
+  errors:
+    messages:
+      invalid_zipcode: "Le code postal doit être une chaîne numérique à 5 chiffres."

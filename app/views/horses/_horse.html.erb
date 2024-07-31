@@ -1,0 +1,11 @@
+<!-- app/views/horses/_horse.html.erb -->
+<tr id="<%= dom_id(horse) %>">
+  <td><%= horse.name %></td>
+  <td><%= horse.race %></td>
+  <td><%= horse.color %></td>
+  <td><%= horse.stable&.name %></td>
+  <td>
+    <%= link_to 'Edit', edit_horse_path(horse), style: 'background-color: blue; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+    <%= link_to 'Delete', horse_path(horse), method: :delete, data: { turbo_confirm: 'Are you sure?', turbo_method: :delete }, style: 'background-color: red; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;' %>
+  </td>
+</tr>
