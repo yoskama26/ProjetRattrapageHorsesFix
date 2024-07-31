@@ -1,5 +1,6 @@
 # README
 Pour lancer le serveur : rails s 
+
 Possibilité de créer un nouveau "Horse" avec un : name, race, color et stable
 De base, il n'y a pas d'écurie (stable) créée et il faut avoir une étable pour pouvoir créer son cheval
 
